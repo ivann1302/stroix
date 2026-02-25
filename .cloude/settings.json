@@ -1,0 +1,12 @@
+{
+  "plansDirectory": "./docs/plans",
+  "enableAllProjectMcpServers": true,
+  "permissions": {
+    "allow": ["Bash(npm:*)", "Bash(git:*)", "Edit(src/**)", "Bash(bd:*)"],
+    "deny": ["Read(.env*)"]
+  },
+  "env": {
+    "ENABLE_TOOL_SEARCH": "auto:5"
+  },
+  "language": "russian"
+}
