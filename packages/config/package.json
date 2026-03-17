@@ -1,0 +1,13 @@
+{
+  "name": "@stroix/config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
+    "eslint": "^10.0.3",
+    "eslint-plugin-import": "^2.32.0",
+    "typescript-eslint": "^8.57.1"
+  }
+}
