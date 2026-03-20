@@ -1,0 +1,37 @@
+@use '@/shared/styles/variables' as *;
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-bg;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: $spacing-2xl;
+  background-color: $color-surface;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+}
+
+.title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+  margin-bottom: $spacing-xs;
+}
+
+.subtitle {
+  font-size: $font-size-base;
+  color: $color-text-muted;
+  margin-bottom: $spacing-xl;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
