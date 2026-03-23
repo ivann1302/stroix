@@ -1,0 +1,30 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.main {
+  flex: 1;
+  padding: 24px;
+  background-color: var(--color-bg, #f5f5f5);
+}
+
+// Затемнение за sidebar на мобильном — кнопка закрыть при клике вне sidebar
+.overlay {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: fixed;
+    inset: 0; // shorthand для top/right/bottom/left: 0
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99; // ниже sidebar (100), выше контента
+  }
+}

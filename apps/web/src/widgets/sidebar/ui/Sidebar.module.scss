@@ -9,6 +9,24 @@
   flex-direction: column;
   padding: $spacing-lg 0;
   flex-shrink: 0;
+
+  // На мобильном sidebar скрыт и выезжает поверх контента
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100; // выше оверлея и контента
+    transform: translateX(-100%); // сдвинут влево за экран
+    transition: transform 0.25s ease;
+  }
+}
+
+// Когда isOpen=true — sidebar въезжает
+.sidebarOpen {
+  @media (max-width: 768px) {
+    transform: translateX(0);
+  }
 }
 
 .logo {

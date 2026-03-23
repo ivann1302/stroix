@@ -1,0 +1,14 @@
+@use '@/shared/styles/variables' as *;
+
+.grid {
+  display: grid;
+  // auto-fill: браузер сам решает сколько колонок влезет
+  // minmax(280px, 1fr): минимум 280px, максимум — занять всё место
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: $spacing-lg;
+}
+
+.empty {
+  color: $color-text-muted;
+  font-size: $font-size-base;
+}

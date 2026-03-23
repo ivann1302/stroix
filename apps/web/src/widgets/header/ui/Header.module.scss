@@ -6,9 +6,13 @@
   border-bottom: 1px solid $color-border;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   padding: 0 $spacing-lg;
   gap: $spacing-md;
+}
+
+// Толкает user и logout вправо
+.spacer {
+  flex: 1;
 }
 
 .user {
@@ -30,5 +34,21 @@
   &:hover {
     color: $color-danger;
     border-color: $color-danger;
+  }
+}
+
+// Кнопка-гамбургер — скрыта на десктопе, видна на мобильном
+.burgerBtn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: $color-text;
+  padding: $spacing-xs;
+  line-height: 1;
+
+  @media (max-width: 768px) {
+    display: block;
   }
 }
