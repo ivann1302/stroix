@@ -1,0 +1,47 @@
+@use '@/shared/styles/variables' as *;
+
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background-color: $color-surface;
+  border-right: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-lg 0;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  padding: 0 $spacing-lg $spacing-xl;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.navItem {
+  display: block;
+  padding: $spacing-sm $spacing-lg;
+  color: $color-text-muted;
+  text-decoration: none;
+  font-size: $font-size-base;
+  border-left: 3px solid transparent;
+  transition: color 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    color: $color-text;
+    background-color: rgba($color-primary, 0.05);
+  }
+}
+
+.navItemActive {
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+  border-left-color: $color-primary;
+  background-color: rgba($color-primary, 0.08);
+}

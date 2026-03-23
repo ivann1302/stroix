@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { MainLayout } from '../layouts/MainLayout';
 
 const router = createBrowserRouter([
     {
@@ -12,12 +13,24 @@ const router = createBrowserRouter([
     },
     {
         path: '/',
-        // временная загрузка страницы
-        lazy: async () => {
-            const { LoginPage } = await import('@/pages/auth/ui/LoginPage') 
-            return { Component: LoginPage }
+        element: <MainLayout />,
+        children: [
+            {
+                index: true, // маршрут по умолчанию
+                lazy: async () => {
+                    const { DashboardPage } = await import('@/pages/dashboard/index')
+                    return { Component: DashboardPage }
+                },
+            },
+            {
+                path: 'dashboard',
+                lazy: async () => {
+                const { DashboardPage } = await import('@/pages/dashboard/index')
+                return { Component: DashboardPage }
         },
-    }
+            }
+        ]
+    },
 ])
 
 // AppRouter — компонент-провайдер, который 
